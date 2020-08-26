@@ -1,0 +1,117 @@
+.file-upload{
+    display: flex;
+    display: -webkit-flex;
+    align-content: center;
+    align-items: center;
+}
+.file-upload > div{
+    position: relative;
+    overflow: hidden;
+}
+.file-upload > div > input[type="file"]{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+}
+.file-upload > div > img{
+    max-width: 100%;
+    min-width: 50%;
+    min-height: 105px;
+    background: url(../img/add-image.png) no-repeat top left;
+}
+.role-update .box-role .box .box-header{
+    border-bottom: 1px solid #eee;
+}
+.role-update .box-role .box{
+    border-radius: 0;
+    border-top-width: 2px;
+    border-bottom: none;
+}
+
+.role-update .box-role .box:nth-child(even){
+    /*background-color: #f7f7f7;*/
+    /*border-top: 2px solid #00a7d0;*/
+}
+
+.role-update .box-role .box:hover{
+    border-color: #dd4b39
+}
+
+.form-group.has-success .toggle .toggle-group label.btn{
+    color: #fff !important;
+}
+.table-report table tbody{
+    white-space: nowrap;
+}
+
+.table-report .table > tbody th,.table-report .summary{
+    position: sticky;
+    position: -webkit-sticky;
+    background-color: white;
+    left: 0;
+}
+
+.advanced-filter{
+    margin-top: 15px;
+}
+
+.tabs-custom{
+    display: flex;
+    display: -webkit-flex;
+}
+.tabs-left.col-sm-2{
+    padding-right: 0;
+    padding-left: 15px !important;
+}
+.tabs-left, .tabs-right {
+    border-bottom: none;
+    padding-top: 2px;
+}
+.tabs-left {
+    border-right: 1px solid #ddd;
+}
+.tabs-right {
+    border-left: 1px solid #ddd;
+}
+.tabs-left>li, .tabs-right>li {
+    float: none;
+    margin-bottom: 2px;
+}
+.tabs-left>li {
+    margin-right: -1px;
+}
+.tabs-right>li {
+    margin-left: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+    border-bottom-color: #ddd;
+    border-right-color: transparent;
+}
+
+.tabs-right>li.active>a,
+.tabs-right>li.active>a:hover,
+.tabs-right>li.active>a:focus {
+    border-bottom: 1px solid #ddd;
+    border-left-color: transparent;
+}
+.tabs-left>li>a {
+    border-radius: 4px 0 0 4px;
+    margin-right: 0;
+    display:block;
+}
+.tabs-right>li>a {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+}
+
+.tab-content.side-tabs-left {
+   flex: 1;
+}
+
+.sidebar-collapse i.user-image{
+    font-size: 2em;
+}

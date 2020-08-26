@@ -1,0 +1,91 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Project Template",
+    "keywords": ["yii2", "framework", "basic", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "kartik-v/yii2-widget-datepicker": "^1.4",
+        "kartik-v/yii2-widget-datetimepicker": "^1.4",
+        "kartik-v/yii2-date-range": "dev-master",
+        "vlucas/phpdotenv": "^3.3",
+        "nesbot/carbon": "^2.17",
+        "bower-asset/moment": "^2.24",
+        "bower-asset/font-awesome": "^4.7.0",
+        "bower-asset/fastclick": "^1.0",
+        "bower-asset/bootstrap-toggle": "^2.2",
+        "bower-asset/datatables": "^1.10",
+        "lcobucci/jwt": "^3.3",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "cbschuld/browser.php": "^1.9",
+        "sammaye/yii2-solr": "^1.20",
+        "2amigos/yii2-ckeditor-widget" : "2.1",
+        "yiisoft/yii2-queue": "^2.3",
+        "kartik-v/yii2-widget-fileinput": "dev-master",
+        "nick-denry/yii2-ckeditor-roxyfileman": "^0.1.4",
+        "pendalf89/yii2-tinymce": "dev-master",
+        "pendalf89/yii2-filemanager": "dev-master",
+        "mihaildev/yii2-elfinder": "*",
+        "alexantr/yii2-elfinder": "^1.7"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.1.0",
+        "yiisoft/yii2-faker": "~2.0.0"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall"
+        ],
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject",
+            "yii\\composer\\Installer::postInstall"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ]
+        },
+        "yii\\composer\\Installer::postInstall": {
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/dialekt-lang/dialekt-php"
+        }
+    ]
+}
